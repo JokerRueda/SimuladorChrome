@@ -1,0 +1,11 @@
+{
+    "name": "Simulador Planetas",
+    "version": "3.1.0",
+    "description": "Simular gravedad por planetas",
+    "manifest_version": 3,
+    "author": "Santiago Rueda",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "PlanetSimulator"
+    }
+}

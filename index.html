@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="CSS/styles.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simulador Planetas</h1>
+    <div id="space">
+        <div id="ball"></div>
+    </div>
+
+    <div id="planet">
+        <h1 id="gravedad">Gravedad</h1>
+    </div>
+    <button type="button" class="btn btn-primary" id="mercurio" onclick="fall('#8C8C8C', 1.85, '3.7 m/s²')">Mercurio</button>
+    <button type="button" class="btn btn-primary" id="venus" onclick="fall('#900092', 4, '8.87 m/s²')">Venus</button>
+    <button type="button" class="btn btn-primary" id="tierra" onclick="fall('#2E6C03', 5, '9.8 m/s²')">Tierra</button>
+    <button type="button" class="btn btn-primary" id="marte" onclick="fall('#C85514', 1.85, '3.71 m/s²')">Marte</button>
+    <button type="button" class="btn btn-primary" id="jupiter" onclick="fall('#AF7AB5', 12.65, '24.79 m/s²')">Jupiter</button>
+    <button type="button" class="btn btn-primary" id="saturno" onclick="fall('#DCC393', 5.3, '10.44 m/s²')">Saturno</button>
+    <button type="button" class="btn btn-primary" id="urano" onclick="fall('#7CD4D8', 4, '8.69 m/s²')">Urano</button>
+    <button type="button" class="btn btn-primary" id="neptuno" onclick="fall('#4A61E6', 5.65, '11.15 m/s²')">Neptuno</button>
+    
+    
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Planeta generico
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Planeta generico</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div id="generico">
+                <div class="input-group input-group-sm mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Gravedad</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-sm" id="gravedadGenerica">
+                </div>
+    
+                <select class="form-select" aria-label="Default select example" id="select">
+                    <option selected>Elige el color</option>
+                    <option value="rojo">Rojo</option>
+                    <option value="verde">Verde</option>
+                    <option value="amarillo">Amarillo</option>
+                  </select>
+            </div>
+    
+            <a class="waves-effect waves-light btn" onclick="pruebaGenerica()">Probar</a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="Scripts/script.js"></script>
+</body>
+</html>
