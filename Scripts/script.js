@@ -13,18 +13,9 @@ function fall(c, g, grav) {
 
 }
 
-
-
 function pruebaGenerica() {
-  var select = document.getElementById('select');
   var gravedad = document.getElementById('gravedadGenerica').value;
-  pruebaG(select);
   console.log(gravedad);
 
-  fall('',(gravedad/9.8)*5, gravedad);
+  fall('',(gravedad/9.8)*5, gravedad + " m/s²");
 }
-
-function pruebaG (select) {
-  var selectedOption = select.selectedIndex;
-  console.log(selectedOption.value + ': ' + selectedOption.text);
-};
